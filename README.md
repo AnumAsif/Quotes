@@ -19,6 +19,12 @@ This application is developed for you to find good quotes. You can add your favo
 4. displays an option to delete a quote
    - INPUT:"Delete button of a quote pressed" 
    - OUTPUT:"That particular quote from a list of quotes is deleted"
+5. display an option to upVote a quote if you like it
+   - INPUT:"Press upVote Button"
+   - OUTPUT:upVote property of a quote increments by 1 on the screen" 
+6. display an option to deVote a quote if you dislike it
+   - INPUT:"Press downVote Button"
+   - OUTPUT:downVote property of a quote increments by 1 on the screen" 
 ### Development
 Want to contribute? Great!
 
