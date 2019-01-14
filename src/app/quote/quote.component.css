@@ -1,5 +1,6 @@
 h1 {
   /* margin-top: -15px; */
+  margin-left: 30%;
   font-family: 'Charm', cursive;
   font-size: 80px;
   text-decoration: underline;
@@ -34,4 +35,11 @@ hr {
 
   width:40px;
   height:30px;
+}
+.quoteWords{
+  font-family: 'Kaushan Script', cursive;
+  font-size: 30px;
+}
+.quote{
+  border-radius: 5px;
 }
