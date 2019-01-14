@@ -13,23 +13,23 @@ export class QuoteComponent implements OnInit {
             new Quote(1,"Stella","Robert Louis Stevenson","Don’t judge each day by the harvest you reap but by the seeds that you plant.", new Date(2019,2,2,5,40,50,0),0,0)];
   highestVotes:number = 0;
   quotesIndex:number = 0;
-  calculateHighestVotes( ){
-    for(var i = 0; i<this.quotes.length;i++){
-      if(this.quotes[i].upVotes > this.highestVotes){
-      this.highestVotes = this.quotes[i].upVotes;
-      this.quotesIndex = i;
-      }
-
-    }
-  }
-  highlight(index:number){
-    this.calculateHighestVotes();
-    if(this.index == this.quotesIndex){
-      this.style.backgroundColor="black";
-    }else{
-      this.style.backgroundColor="transparent";
-    }
-  }
+  // calculateHighestVotes( ){
+  //   for(var i = 0; i<this.quotes.length;i++){
+  //     if(this.quotes[i].upVotes > this.highestVotes){
+  //     this.highestVotes = this.quotes[i].upVotes;
+  //     this.quotesIndex = i;
+  //     }
+  //
+  //   }
+  // }
+  // highlight(index:number){
+  //   this.calculateHighestVotes();
+  //   if(this.index == this.quotesIndex){
+  //     this.style.backgroundColor="black";
+  //   }else{
+  //     this.style.backgroundColor="transparent";
+  //   }
+  // }
 
 
   deleteQuote(isInappropriate,index){

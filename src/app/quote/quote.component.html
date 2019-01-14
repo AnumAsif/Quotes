@@ -4,7 +4,7 @@
   <div class="row">
     <div class="col-md-7" id="left">
       <div *ngFor="let quote of quotes; let i= 'index'">
-        <p id={{i}} (ngStyle)="highlight(i)">"{{quote.quoteWords}}" -by {{quote.author|uppercase}}</p>
+        <p> "{{quote.quoteWords}}" -by {{quote.author|uppercase}}</p>
         <!-- <div *ngIf='quote.upVotes > highestVotes; else dontHighlight'>
           <p id={{i}}  #quoteWords >
             "{{quote.quoteWords}}" -by {{quote.author|uppercase}}
