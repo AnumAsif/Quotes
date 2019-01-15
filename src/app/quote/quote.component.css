@@ -4,42 +4,46 @@ h1 {
   font-family: 'Charm', cursive;
   font-size: 80px;
   text-decoration: underline;
-  text-shadow:2px 2px 8px black;
+  text-shadow: 2px 2px 8px black;
 }
-h2{
+
+h2 {
   font-family: 'Charm', cursive;
 }
 
 .container {
   background-color: inherit;
 }
-#left, #right{;
+
+#left, #right {
+  ;
   background: rgba(46, 40, 35, 0.7);
-  border:5px solid #6C5A45;
-  /* background-color: brown;
-  background-opacity:0.5; */
-  /* opacity:0.5; */
+  border: 5px solid #6C5A45;
 }
-#left{
+
+#left {
   /* margin-left: 10px; */
 }
+
 #right {
-  height:600px;
+  height: 600px;
   margin-left: -30px;
 }
+
 hr {
   border-width: 6px;
 }
 
-#like,#dislike{
-
-  width:40px;
-  height:30px;
+#like, #dislike {
+  width: 40px;
+  height: 30px;
 }
-.quoteWords{
+
+.quoteWords {
   font-family: 'Kaushan Script', cursive;
   font-size: 30px;
 }
-.quote{
+
+.quote {
   border-radius: 5px;
 }

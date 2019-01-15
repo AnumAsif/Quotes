@@ -1,11 +1,11 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-md-12">
-      <form (ngSubmit) = 'submitQuote()' #quoteForm = 'ngForm'>
+      <form (ngSubmit)='submitQuote()' #quoteForm='ngForm'>
         <!--Publisher Name  -->
         <div class="form-group">
           <label for="publisher">YOUR NAME</label>
-          <input type="text" class = "form-control" id = "publisher" [(ngModel)]="newQuote.publisher" name="publisher" #publisher="ngModel" required>
+          <input type="text" class="form-control" id="publisher" [(ngModel)]="newQuote.publisher" name="publisher" #publisher="ngModel" required>
           <div [hidden]="publisher.valid || publisher.pristine" class="alert alert-danger">
             <p>Enter your name</p>
           </div>
@@ -13,7 +13,7 @@
         <!--Author Name  -->
         <div class="form-group">
           <label for="author">AUTHOR NAME</label>
-          <input type="text" class = "form-control" id = "author" [(ngModel)] = "newQuote.author" name="author" #author="ngModel" required>
+          <input type="text" class="form-control" id="author" [(ngModel)]="newQuote.author" name="author" #author="ngModel" required>
           <div [hidden]="author.valid || author.pristine" class="alert alert-danger">
             <p>Enter Author's name</p>
           </div>
@@ -21,17 +21,12 @@
         <!--Quote  -->
         <div class="form-group">
           <label for="quote">QUOTE</label>
-          <textarea class="form-control" id ="quoteWords" rows="8" [(ngModel)]="newQuote.quoteWords" name="quoteWords" #quoteWords = "ngModel"  required></textarea>
+          <textarea class="form-control" id="quoteWords" rows="8" [(ngModel)]="newQuote.quoteWords" name="quoteWords" #quoteWords="ngModel" required></textarea>
           <div [hidden]="quoteWords.valid || quoteWords.pristine" class="alert alert-danger">
             <p>Write a quote that you wanted to add</p>
           </div>
         </div>
-          <button type="Submit" class="btn btn-lg" id="addQuoteBtn" [disabled]="quoteForm.invalid">Add Quote</button>
-          <!-- Display {{newQuote.id}} -->
-          <!-- <br>Display {{newQuote.publisher}}
-          <br>Display {{newQuote.author}}
-          <br>Display {{newQuote.quote}} -->
-          <!-- Display {{newQuote.timeOfCreation|date:mmss}} -->
+        <button type="Submit" class="btn btn-lg" id="addQuoteBtn" [disabled]="quoteForm.invalid">Add Quote</button>
       </form>
     </div>
   </div>

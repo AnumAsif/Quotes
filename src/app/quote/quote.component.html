@@ -5,38 +5,29 @@
     <div class="col-md-7" id="left">
       <div *ngFor="let quote of quotes; let i= 'index'">
         <p class="quote" *ngIf="i == quotesIndex; else dontHighlight" appHighlight><span class="quoteWords">"{{quote.quoteWords}}"</span> -by {{quote.author|uppercase}}</p>
-        <ng-template #dontHighlight><p class= "quote"> <span class="quoteWords">"{{quote.quoteWords}}"</span> -by {{quote.author|uppercase}}</p></ng-template>
-        <!-- <div *ngIf='quote.upVotes > highestVotes; else dontHighlight'>
-          <p id={{i}}  #quoteWords >
-            "{{quote.quoteWords}}" -by {{quote.author|uppercase}}
-          </p>
-        </div>
         <ng-template #dontHighlight>
-          <p>"{{quote.quoteWords}}" -by {{quote.author|uppercase}}</p>
-        </ng-template> -->
+          <p class="quote"> <span class="quoteWords">"{{quote.quoteWords}}"</span> -by {{quote.author|uppercase}}</p>
+        </ng-template>
         <app-quote-details [quote]='quote' (isInappropriate)='deleteQuote($event,i)'></app-quote-details>
         <p>
           <button class="btn" type="button" name="dislike" (click)=downVote(i)><img id="dislike" src="assets/images/thumbsDownSign.png" alt="button to dislike"></button>
-          <button class="btn" type="button" name="like" (click) = upVote(i) (click) = "calculateHighestVotes()"><img id="like" src="assets/images/thumbsUpSign.png" alt="button to like"></button>
-
+          <button class="btn" type="button" name="like" (click)=upVote(i) (click)="calculateHighestVotes()"><img id="like" src="assets/images/thumbsUpSign.png" alt="button to like"></button>
         </p>
         <p>DownVotes:{{quote.downVotes}} | UpVotes:{{quote.upVotes}}</p>
         <p>Uploaded {{quote.timeOfCreation|timeCount}}</p>
         <hr>
       </div>
-
     </div>
 
     <div class="col-md-1">
 
     </div>
+
     <div class="col-md-4" id="right">
       <h2>ADD A QUOTE</h2>
       <div class="row">
         <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
       </div>
-
-
     </div>
 
   </div>
