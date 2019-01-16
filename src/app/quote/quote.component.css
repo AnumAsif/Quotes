@@ -47,3 +47,7 @@ hr {
 .quote {
   border-radius: 5px;
 }
+#refreshBtn{
+  background-color: #F0B27A;
+  font-family: 'Charm', cursive;
+}

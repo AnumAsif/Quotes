@@ -23,7 +23,7 @@ export class QuoteComponent implements OnInit {
   }
   deleteQuote(isInappropriate, index) {
     if (isInappropriate) {
-      let toDelete = confirm(`Are you sure you want to delete this quote written by ${this.quotes[index].author}`);
+      let toDelete = confirm(`Are you sure you want to delete this quote ${this.quotes[index].quoteWords}`);
       if (toDelete) {
         this.quotes.splice(index, 1);
       }
@@ -41,7 +41,20 @@ export class QuoteComponent implements OnInit {
   downVote(index) {
     this.quotes[index].downVotes += 1;
   }
-  constructor() { }
+  val:string  = "Uploaded {{quote.timeOfCreation|timeCount}}"
+  refresh(id:string):void{
+    document.getElementById(id).innerHTML=this.val;
+    }
+//   var app=angular.module('refresh_p',[])
+//   .controller('refresh_control',function(){
+//     var c=0;
+//     $scope.message="This DIV is refreshed "+c+" time.";
+//     var timer=$interval(function(){
+//       $scope.message="This DIV is refreshed "+c+" time.";
+//       c++;
+//     },30000);
+// });
+    constructor() { }
 
   ngOnInit() {
   }

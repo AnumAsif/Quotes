@@ -14,7 +14,8 @@
           <button class="btn" type="button" name="like" (click)=upVote(i) (click)="calculateHighestVotes()"><img id="like" src="assets/images/thumbsUpSign.png" alt="button to like"></button>
         </p>
         <p>DownVotes:{{quote.downVotes}} | UpVotes:{{quote.upVotes}}</p>
-        <p>Uploaded {{quote.timeOfCreation|timeCount}}</p>
+        <button class="btn" type="button" name="refresh"  (click)="refresh(timeSinceCreated)" id="refreshBtn">Refresh</button>
+        <p #timeSinceCreated id="timeSinceCreated">Uploaded {{quote.timeOfCreation|timeAgo}}</p>
         <hr>
       </div>
     </div>
